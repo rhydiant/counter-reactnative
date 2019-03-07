@@ -1,37 +1,20 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- * @lint-ignore-every XPLATJSCOPYRIGHT1
- */
-
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
-export default class App extends Component {
-  state = {
-    counter: 0,
-  };
+import { Provider } from 'react-redux';
 
-  increment() {
-    this.setState(previousState => ({
-      counter: previousState.counter + 1,
-    }));
-  }
+import Counter from './src/components/counter';
+import store from './src/redux/store';
 
+class App extends Component {
   render() {
+    console.log('render App');
     return (
-      <View style={styles.container}>
-        <Text>count is {this.state.counter}</Text>
-        <Button
-          title="increment"
-          onPress={() => {
-            this.increment();
-          }}
-        />
-      </View>
+      <Provider store={store}>
+        <View style={styles.container}>
+          <Counter />
+        </View>
+      </Provider>
     );
   }
 }
@@ -44,3 +27,5 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
 });
+
+export default App;

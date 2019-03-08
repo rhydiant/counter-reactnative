@@ -1,27 +1,34 @@
-import React, { Component } from 'react';
+// @flow
+
+import React from 'react';
 import { Text, View, Button } from 'react-native';
 
-import increment from '../redux/actions';
+import { connect } from 'react-redux';
+import increment from '../redux/actionCreators';
 
-class Counter extends Component {
-  render() {
-    console.log(`rendering Counter, props is ${JSON.stringify(this.props)}`);
-    return (
-      <View>
-        <Text>count is {this.props.counter}</Text>
-        <Button title="increment" onPress={this.props.increment} />
-      </View>
-    );
-  }
+type Props = {
+  counter: number,
+  increment: any,
+};
+
+function Counter(props: Props) {
+  // eslint-disable-next-line no-console
+  console.log(`rendering Counter, props is ${JSON.stringify(props)}`);
+  const { counter } = props;
+  return (
+    <View>
+      <Text>
+        count is
+        {counter}
+      </Text>
+      <Button title="increment" onPress={props.increment} />
+    </View>
+  );
 }
 
-import { connect } from 'react-redux';
-
-const mapStateToProps = state => {
-  return {
-    counter: state.counter,
-  };
-};
+const mapStateToProps = state => ({
+  counter: state.counter,
+});
 
 const mapDispatchToProps = {
   increment,

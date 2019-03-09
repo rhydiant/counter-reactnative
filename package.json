@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "ios": "./node_modules/.bin/react-native run-ios",
+    "lint": "./node_modules/eslint/bin/eslint.js src",
     "test": "jest",
-    "flow start": "flow start",
-    "flow stop": "flow stop",
-    "flow status": "flow status",
-    "flow coverage": "flow coverage"
+    "flow-start": "./node_modules/.bin/flow start",
+    "flow-stop": "flow stop",
+    "flow-status": "flow status",
+    "flow-coverage": "flow coverage"
   },
   "dependencies": {
     "react": "16.6.3",

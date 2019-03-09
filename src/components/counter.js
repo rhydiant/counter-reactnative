@@ -1,3 +1,4 @@
+/* eslint-disable react/destructuring-assignment */
 // @flow
 
 import React from 'react';
@@ -17,10 +18,7 @@ function Counter(props: Props) {
   const { counter } = props;
   return (
     <View>
-      <Text>
-        count is
-        {counter}
-      </Text>
+      <Text>{`count is ${counter}`}</Text>
       <Button title="increment" onPress={props.increment} />
     </View>
   );

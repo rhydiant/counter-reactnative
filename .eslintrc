@@ -2,6 +2,7 @@
   "extends": ["airbnb", "plugin:flowtype/recommended"],
   "parser": "babel-eslint",
   "plugins": ["flowtype"],
+  "env": { "jest": true },
   "rules": {
     "consistent-return": "off",
     "flowtype/no-types-missing-file-annotation": "warn",

@@ -6,7 +6,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "ios": "./node_modules/.bin/react-native run-ios",
     "lint": "./node_modules/eslint/bin/eslint.js src",
-    "test": "jest",
+    "test": "jest --passWithNoTests --config ./jest.config.js",
     "flow-start": "./node_modules/.bin/flow start",
     "flow-stop": "flow stop",
     "flow-status": "flow status",
@@ -19,9 +19,13 @@
     "redux": "^4.0.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/preset-flow": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "24.1.0",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.10.0",
     "eslint": "^5.15.1",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-flowtype": "^3.4.2",
@@ -29,10 +33,11 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4",
     "flow-bin": "^0.86.0",
-    "jest": "24.1.0",
+    "jest": "^24.1.0",
     "metro-react-native-babel-preset": "0.53.0",
     "prettier-eslint": "^8.8.2",
-    "react-test-renderer": "16.6.3"
+    "react-test-renderer": "16.6.3",
+    "redux-mock-store": "^1.5.3"
   },
   "jest": {
     "preset": "react-native"

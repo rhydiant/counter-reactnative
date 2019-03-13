@@ -1,4 +1,4 @@
-import { INCREMENT_COUNTER } from './types';
+import { INCREMENT_COUNTER } from './Types';
 
 function counter(store = { counter: 0 }, action) {
   if (action === undefined) return store;

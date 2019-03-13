@@ -5,16 +5,14 @@ import React from 'react';
 import { Text, View, Button } from 'react-native';
 
 import { connect } from 'react-redux';
-import increment from '../redux/actionCreators';
+import increment from '../redux/ActionCreators';
 
 type Props = {
   counter: number,
   increment: any,
 };
 
-function Counter(props: Props) {
-  // eslint-disable-next-line no-console
-  console.log(`rendering Counter, props is ${JSON.stringify(props)}`);
+export function Counter(props: Props) {
   const { counter } = props;
   return (
     <View>

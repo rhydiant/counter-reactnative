@@ -1,5 +1,5 @@
-import counter from '../../../src/redux/reducer';
-import increment from '../../../src/redux/actionCreators';
+import counter from '../../../src/redux/Reducer';
+import increment from '../../../src/redux/ActionCreators';
 
 describe('counter', () => {
   it('should increment initial counter state', () => {

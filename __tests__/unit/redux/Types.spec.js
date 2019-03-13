@@ -1,4 +1,4 @@
-import { INCREMENT_COUNTER } from '../../../src/redux/types';
+import { INCREMENT_COUNTER } from '../../../src/redux/Types';
 
 describe('INCREMENT_COUNTER', () => {
   it('should return the expected type', () => {

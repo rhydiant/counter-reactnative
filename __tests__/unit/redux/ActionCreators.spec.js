@@ -1,5 +1,5 @@
-import { INCREMENT_COUNTER } from '../../../src/redux/types';
-import increment from '../../../src/redux/actionCreators';
+import { INCREMENT_COUNTER } from '../../../src/redux/Types';
+import increment from '../../../src/redux/ActionCreators';
 
 describe('increment', () => {
   it('should create an action to increment', () => {

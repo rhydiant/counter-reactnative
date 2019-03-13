@@ -4,7 +4,7 @@ import { StyleSheet, View } from 'react-native';
 import { Provider } from 'react-redux';
 
 import Counter from './Counter';
-import store from '../redux/store';
+import store from '../redux/Store';
 
 const styles = StyleSheet.create({
   container: {
